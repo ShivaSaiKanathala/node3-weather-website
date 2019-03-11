@@ -11,7 +11,7 @@ const forecast = (lat, long, callback)=>{
         }else if(body.error){    
             console.log('unable to find location')
         }else{
-            callback(undefined, body.daily.data[0].summary+' it is currently '+body.currently.temperature+'. There is a '+body.currently.precipProbability+'% chances of rain')
+            callback(undefined, body.daily.data[0].summary+' it is currently '+body.currently.temperature+'. There is a '+body.currently.precipProbability+'% chances of rain. The current timezone is'+body.currently.timezone)
         }
     })
 }
