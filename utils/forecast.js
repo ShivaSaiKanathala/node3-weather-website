@@ -11,7 +11,7 @@ const forecast = (lat, long, callback)=>{
         }else if(body.error){    
             console.log('unable to find location')
         }else{
-            callback(undefined, body.daily.data[0].summary+' it is currently '+body.currently.temperature+'. There is a '+body.currently.precipProbability+'% chances of rain. The current timezone is '+body.timezone+' The wind speed is '+body.currently.windSpeed)
+            callback(undefined, body.daily.data[0].summary+' it is currently '+body.currently.temperature+' degrees out. The high today is '+body.daily.data[0].temperatureHigh +', with a low of '+body.daily.data[0].temperatureLow + ' There is a '+body.currently.precipProbability+'% chances of rain. The current timezone is '+body.timezone+'. The wind speed is '+body.currently.windSpeed)
         }
     })
 }
